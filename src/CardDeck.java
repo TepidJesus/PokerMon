@@ -1,30 +1,6 @@
 import java.util.ArrayList;
-
+import java.security.SecureRandom;
 public class CardDeck {
-
-    private static class Card {
-        int rank;
-        String suit;
-
-        Card (int value, String suit) {
-            this.rank = value;
-            this.suit = suit;
-
-        }
-
-        public String toString() {
-            return this.rank + " of " + this.suit;
-        }
-
-        public int getRank() {
-            return this.rank;
-        }
-
-        public String getSuit() {
-            return this.suit;
-        }
-    }
-
     ArrayList<String> suits = new ArrayList<String>() {{
         add("Hearts");
         add("Diamonds");
@@ -49,7 +25,7 @@ public class CardDeck {
     }};
 
     ArrayList<Card> deck = new ArrayList<Card>();
-
+    SecureRandom randomGen = new SecureRandom();
     CardDeck () {
          for (String suit : suits) {
              for (Integer value : values) {
@@ -57,6 +33,36 @@ public class CardDeck {
              }
          }
 
+    }
+
+    public Card getRandCard() {
+        // remove the card from the deck and return it
+        int randomInt = randomGen.nextInt(deck.size());
+        int rand = (int) (randomInt);
+        return deck.remove(rand);
+    }
+
+    private static class Card {
+        int rank;
+        String suit;
+
+        Card (int value, String suit) {
+            this.rank = value;
+            this.suit = suit;
+
+        }
+
+        public String toString() {
+            return this.rank + " of " + this.suit;
+        }
+
+        public int getRank() {
+            return this.rank;
+        }
+
+        public String getSuit() {
+            return this.suit;
+        }
     }
 
 
