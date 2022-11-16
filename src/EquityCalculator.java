@@ -31,23 +31,35 @@ public class EquityCalculator {
     }
 
     public void runSimulation() {
+
+        CardDeck deckTemplate = new CardDeck();
+
+        for (Card card : heroCards) {
+            deckTemplate.removeCard(card);
+        }
+
+        for (Card[] villain : villainCards) {
+            for (Card card : villain) {
+                deckTemplate.removeCard(card);
+            }
+        }
+
+        // Simulation Starts Here
         for (int i = 0; i < numSimulations; i++) {
-            CardDeck deck = new CardDeck();
+            CardDeck deck = new CardDeck(deckTemplate.deck);
             Card[] board = new Card[5];
 
-            for (Card card : heroCards) {
-                deck.removeCard(card);
-            }
 
-            for (Card[] villain : villainCards) {
-                for (Card card : villain) {
-                    deck.removeCard(card);
-                }
-            }
 
             // Getting the board
             for (int j = 0; j < 5; j++) {
                 board[j] = deck.getRandCard();
+            }
+
+            // check if the hero has a pair
+            boolean heroHasPair = false;
+            if (heroCards[0].getRank() == heroCards[1].getRank()) {
+                heroHasPair = true;
             }
 
 
