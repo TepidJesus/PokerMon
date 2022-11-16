@@ -47,48 +47,46 @@ public class CardDeck {
         deck.remove(card);
     }
 
-    private static class Card {
-        int rank;
-        String suit;
+}
 
-        Card(int value, String suit) {
-            this.rank = value;
-            this.suit = suit;
+class Card {
+    int rank;
+    String suit;
 
-        }
+    Card(int value, String suit) {
+        this.rank = value;
+        this.suit = suit;
 
-        public String toString() {
-            return this.rank + " of " + this.suit;
-        }
-
-        public int getRank() {
-            return this.rank;
-        }
-
-        public String getSuit() {
-            return this.suit;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (obj == null) {
-                return false;
-            }
-            if (!Card.class.isAssignableFrom(obj.getClass())) {
-                return false;
-            }
-
-            final Card other = (Card) obj;
-            if (this.rank != other.rank) {
-                return false;
-            }
-            if (this.suit.equals(other.suit)) {
-                return false;
-            }
-            return true;
-        }
     }
 
+    public String toString() {
+        return this.rank + " of " + this.suit;
+    }
 
+    public int getRank() {
+        return this.rank;
+    }
 
+    public String getSuit() {
+        return this.suit;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (!Card.class.isAssignableFrom(obj.getClass())) {
+            return false;
+        }
+
+        final Card other = (Card) obj;
+        if (this.rank != other.rank) {
+            return false;
+        }
+        if (this.suit.equals(other.suit)) {
+            return false;
+        }
+        return true;
+    }
 }
