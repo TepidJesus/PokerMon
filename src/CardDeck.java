@@ -25,7 +25,7 @@ public class CardDeck {
     }};
 
     ArrayList<Card> deck = new ArrayList<Card>();
-    SecureRandom randomGen = new SecureRandom();
+    SecureRandom randomGen;
     CardDeck () {
 
          for (String suit : suits) {
@@ -34,6 +34,14 @@ public class CardDeck {
              }
          }
 
+         randomGen = new SecureRandom();
+
+    }
+
+    CardDeck(ArrayList<Card> deckTemplate) {
+
+        deck.addAll(deckTemplate);
+        randomGen = new SecureRandom();
     }
 
     public Card getRandCard() {

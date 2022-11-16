@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Began Monte Carlo Ground Work">
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Finished Deck Card Removal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EquityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquityCalculator.java" afterDir="false" />
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668551169842</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished Deck Card Removal">
+      <created>1668562216253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668562216253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +142,7 @@
     <MESSAGE value="V1" />
     <MESSAGE value="Overridden Equality Check" />
     <MESSAGE value="Began Monte Carlo Ground Work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began Monte Carlo Ground Work" />
+    <MESSAGE value="Finished Deck Card Removal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Deck Card Removal" />
   </component>
 </project>
