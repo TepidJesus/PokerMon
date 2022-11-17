@@ -44,23 +44,36 @@ public class EquityCalculator {
             }
         }
 
+
+
         // Simulation Starts Here
         for (int i = 0; i < numSimulations; i++) {
             CardDeck deck = new CardDeck(deckTemplate.deck);
             Card[] board = new Card[5];
-
-
 
             // Getting the board
             for (int j = 0; j < 5; j++) {
                 board[j] = deck.getRandCard();
             }
 
-            // check if the hero has a pair
-            boolean heroHasPair = false;
-            if (heroCards[0].getRank() == heroCards[1].getRank()) {
-                heroHasPair = true;
+            int boardStrength = 0;
+            boardStrength = (Card[] cards);
+
+            // Finding Heroes Max Hand Strength
+            // Implement a 7 choose 5 algorithm
+            int heroMaxHandStrength = 0;
+            for (int j = 0; j < 7; j++) {
+                for (int k = j + 1; k < 7; k++) {
+                    Card[] heroHand = new Card[2];
+                    heroHand[0] = heroCards[j];
+                    heroHand[1] = heroCards[k];
+                    int heroHandStrength = evaluateHand(this.heroCards, board);
+                    if (heroHandStrength < heroMaxHandStrength) {
+                        heroMaxHandStrength = heroHandStrength;
+                    }
+                }
             }
+
 
 
             // Create a new deck
@@ -68,6 +81,15 @@ public class EquityCalculator {
             // Determine the winner
             // Update the win counts
         }
+    }
+
+    public int evaluateHand(Card[] cards) {
+        int handStrength = 0;
+
+
+
+        return handStrength;
+
     }
 
 }
