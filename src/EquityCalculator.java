@@ -84,7 +84,6 @@ public class EquityCalculator {
     }
 
     public int evaluateHand(Card[] cards) {
-        int handStrength = 0;
 
         final int c1 = cards[0].getValue();
         final int c2 = cards[1].getValue();
@@ -109,9 +108,14 @@ public class EquityCalculator {
         final int product = (c1 & 0xFF) * (c2 & 0xFF) * (c3 & 0xFF) * (c4 & 0xFF) * (c5 & 0xFF);
         return HandTables.Hash.Values.TABLE[hash(product)];
 
+    }
 
-        return handStrength;
-
+    private static int hash(int key) {
+        key += 0xE91AAA35;
+        key ^= key >>> 16;
+        key += key << 8;
+        key ^= key >>> 4;
+        return ((key + (key << 2)) >>> 19) ^ HandTables.Hash.Adjust.TABLE[(key >>> 8) & 0x1FF];
     }
 
 }
