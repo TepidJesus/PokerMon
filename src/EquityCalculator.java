@@ -57,7 +57,7 @@ public class EquityCalculator {
             }
 
             int boardStrength = 0;
-            boardStrength = (Card[] cards);
+            boardStrength = evaluateHand(board);
 
             // Finding Heroes Max Hand Strength
             // Implement a 7 choose 5 algorithm
@@ -86,6 +86,28 @@ public class EquityCalculator {
     public int evaluateHand(Card[] cards) {
         int handStrength = 0;
 
+        final int c1 = cards[0].getValue();
+        final int c2 = cards[1].getValue();
+        final int c3 = cards[2].getValue();
+        final int c4 = cards[3].getValue();
+        final int c5 = cards[4].getValue();
+
+
+        final int index = (c1 | c2 | c3 | c4 | c5) >> 16;
+
+        if ((c1 & c2 & c3 & c4 & c5 & 0xF000) != 0) {
+            return HandTables.Flushes.TABLE[index];
+        }
+
+        // Straight and high card hands
+        final int value = HandTables.Unique.TABLE[index];
+        if (value != 0) {
+            return value;
+        }
+
+        // Remaining cards
+        final int product = (c1 & 0xFF) * (c2 & 0xFF) * (c3 & 0xFF) * (c4 & 0xFF) * (c5 & 0xFF);
+        return HandTables.Hash.Values.TABLE[hash(product)];
 
 
         return handStrength;
