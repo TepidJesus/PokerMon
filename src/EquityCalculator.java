@@ -51,6 +51,7 @@ public class EquityCalculator {
             CardDeck deck = new CardDeck(deckTemplate.deck);
             Card[] board = new Card[5];
 
+
             // Getting the board
             for (int j = 0; j < 5; j++) {
                 board[j] = deck.getRandCard();
@@ -59,22 +60,19 @@ public class EquityCalculator {
             int boardStrength = 0;
             boardStrength = evaluateHand(board);
 
-            // Finding Heroes Max Hand Strength
-            // Implement a 7 choose 5 algorithm
             int heroMaxHandStrength = 0;
-            for (int j = 0; j < 7; j++) {
-                for (int k = j + 1; k < 7; k++) {
-                    Card[] heroHand = new Card[2];
-                    heroHand[0] = heroCards[j];
-                    heroHand[1] = heroCards[k];
-                    int heroHandStrength = evaluateHand(this.heroCards, board);
-                    if (heroHandStrength < heroMaxHandStrength) {
-                        heroMaxHandStrength = heroHandStrength;
-                    }
+            Card[] combinedCards = new Card[7];
+            System.arraycopy(heroCards, 0, combinedCards, 0, 2);
+            System.arraycopy(board, 0, combinedCards, 2, 5);
+
+            Card[][] heroCombinations = getCombinations(combinedCards, 5);
+
+            for (Card[] heroHand : heroCombinations) {
+                int heroHandStrength = evaluateHand(heroHand);
+                if (heroHandStrength < heroMaxHandStrength) {
+                    heroMaxHandStrength = heroHandStrength;
                 }
             }
-
-
 
             // Create a new deck
             // Deal the heroHand and the villainHands
@@ -116,6 +114,28 @@ public class EquityCalculator {
         key += key << 8;
         key ^= key >>> 4;
         return ((key + (key << 2)) >>> 19) ^ HandTables.Hash.Adjust.TABLE[(key >>> 8) & 0x1FF];
+    }
+
+    public Card[][] getCombinations(Card[] cards, int numCards) {
+        Card[][] combinations = new Card[21][5];
+        int index = 0;
+        for (int i = 0; i < cards.length; i++) {
+            for (int j = i + 1; j < cards.length; j++) {
+                for (int k = j + 1; k < cards.length; k++) {
+                    for (int l = k + 1; l < cards.length; l++) {
+                        for (int m = l + 1; m < cards.length; m++) {
+                            combinations[index][0] = cards[i];
+                            combinations[index][1] = cards[j];
+                            combinations[index][2] = cards[k];
+                            combinations[index][3] = cards[l];
+                            combinations[index][4] = cards[m];
+                            index++;
+                        }
+                    }
+                }
+            }
+        }
+        return combinations;
     }
 
 }
