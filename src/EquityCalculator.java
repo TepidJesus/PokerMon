@@ -3,6 +3,7 @@ public class EquityCalculator {
     int numVillains;
     int heroWins;
     int villainWins;
+    int ties;
     int numSimulations;
 
     Card[] heroCards;
@@ -26,6 +27,7 @@ public class EquityCalculator {
 
         this.heroWins = 0;
         this.villainWins = 0;
+        this.ties = 0;
 
         this.numSimulations = numSimulations;
     }
@@ -60,7 +62,7 @@ public class EquityCalculator {
             int boardStrength = 0;
             boardStrength = evaluateHand(board);
 
-            int heroMaxHandStrength = 0;
+            int heroMaxHandStrength = 9000;
             Card[] combinedCards = new Card[7];
             System.arraycopy(heroCards, 0, combinedCards, 0, 2);
             System.arraycopy(board, 0, combinedCards, 2, 5);
@@ -74,10 +76,49 @@ public class EquityCalculator {
                 }
             }
 
-            // Create a new deck
-            // Deal the heroHand and the villainHands
-            // Determine the winner
-            // Update the win counts
+            Card[][][] villainCombinations;
+            Card[][] villainCombinedCards = new Card[numVillains][7];
+            for (int j = 0; j < numVillains; j++) {
+                System.arraycopy(villainCards[j], 0, villainCombinedCards[j], 0, 2);
+                System.arraycopy(board, 0, villainCombinedCards[j], 2, 5);
+            }
+
+            villainCombinations = new Card[numVillains][][];
+            for (int j = 0; j < numVillains; j++) {
+                villainCombinations[j] = getCombinations(villainCombinedCards[j], 5);
+            }
+
+            int[] villainMaxHandStrength = new int[numVillains];
+            for (int j = 0; j < numVillains; j++) {
+                for (Card[] villainHand : villainCombinations[j]) {
+                    int villainHandStrength = evaluateHand(villainHand);
+                    if (villainHandStrength < villainMaxHandStrength[j]) {
+                        villainMaxHandStrength[j] = villainHandStrength;
+                    }
+                }
+            }
+
+
+
+            int bestVillainHandStrength = 9000;
+            for (int j = 0; j < numVillains; j++) {
+                if (villainMaxHandStrength[j] < bestVillainHandStrength) {
+                    bestVillainHandStrength = villainMaxHandStrength[j];
+                }
+            }
+
+            if (boardStrength < bestVillainHandStrength && boardStrength < heroMaxHandStrength) {
+                this.ties++;
+            } else if (heroMaxHandStrength < bestVillainHandStrength) {
+                this.heroWins++;
+            } else {
+                this.villainWins++;
+            }
+
+
+
+
+
         }
     }
 
