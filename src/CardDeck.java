@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.security.SecureRandom;
 public class CardDeck {
-    ArrayList<String> suits = new ArrayList<String>() {{
-        add("Hearts");
-        add("Diamonds");
-        add("Spades");
-        add("Clubs");
+    ArrayList<Integer> suits = new ArrayList<Integer>() {{
+        add(Card.HEARTS);
+        add(Card.DIAMONDS);
+        add(Card.SPADES);
+        add(Card.CLUBS);
     }};
 
     ArrayList<Integer> values = new ArrayList<Integer>() {{
@@ -28,9 +28,9 @@ public class CardDeck {
     SecureRandom randomGen;
     CardDeck () {
 
-         for (String suit : suits) {
+         for (Integer suit : suits) {
              for (Integer value : values) {
-                 deck.add(new Card(suit, rank));
+                 deck.add(new Card(value, suit));
              }
          }
 
