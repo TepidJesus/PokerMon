@@ -67,8 +67,8 @@ public class EquityCalculator {
                 board[j] = deck.getRandCard();
             }
 
-            int boardStrength = 9000;
-            boardStrength = evaluateHand(board);
+//            int boardStrength = 9000;
+//            boardStrength = evaluateHand(board);
 
             int heroMaxHandStrength = 9000;
             Card[] combinedCards = new Card[7];
@@ -122,7 +122,7 @@ public class EquityCalculator {
 //            System.out.println("Hero Max Hand Strength: " + heroMaxHandStrength);
 //            System.out.println("Villain Max Hand Strength: " + bestVillainHandStrength);
 
-            if (boardStrength < bestVillainHandStrength && boardStrength < heroMaxHandStrength) {
+            if (bestVillainHandStrength == heroMaxHandStrength) {
                 this.ties++;
             } else if (heroMaxHandStrength < bestVillainHandStrength) {
                 this.heroWins++;
