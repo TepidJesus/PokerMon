@@ -32,6 +32,14 @@ public class EquityCalculator {
         this.numSimulations = numSimulations;
     }
 
+    public void printResults() {
+        System.out.println("Hero Wins: " + heroWins);
+        System.out.println("Villain Wins: " + villainWins);
+        System.out.println("Ties: " + ties);
+        // Print the percentage of wins for the hero
+        System.out.println("Hero Win Percentage: " + (double) heroWins / (double) numSimulations);
+    }
+
     public void runSimulation() {
 
         CardDeck deckTemplate = new CardDeck();
@@ -59,7 +67,7 @@ public class EquityCalculator {
                 board[j] = deck.getRandCard();
             }
 
-            int boardStrength = 0;
+            int boardStrength = 9000;
             boardStrength = evaluateHand(board);
 
             int heroMaxHandStrength = 9000;
@@ -90,9 +98,12 @@ public class EquityCalculator {
 
             int[] villainMaxHandStrength = new int[numVillains];
             for (int j = 0; j < numVillains; j++) {
+                villainMaxHandStrength[j] = 9000;
+            }
+            for (int j = 0; j < numVillains; j++) {
                 for (Card[] villainHand : villainCombinations[j]) {
                     int villainHandStrength = evaluateHand(villainHand);
-                    if (villainHandStrength < villainMaxHandStrength[j]) {
+                    if (villainHandStrength < villainMaxHandStrength[j] || villainMaxHandStrength[j] == 9000) {
                         villainMaxHandStrength[j] = villainHandStrength;
                     }
                 }
@@ -100,12 +111,16 @@ public class EquityCalculator {
 
 
 
-            int bestVillainHandStrength = 9000;
+            int bestVillainHandStrength = 90000;
             for (int j = 0; j < numVillains; j++) {
                 if (villainMaxHandStrength[j] < bestVillainHandStrength) {
                     bestVillainHandStrength = villainMaxHandStrength[j];
                 }
             }
+
+//            System.out.println("Board Strength: " + boardStrength);
+//            System.out.println("Hero Max Hand Strength: " + heroMaxHandStrength);
+//            System.out.println("Villain Max Hand Strength: " + bestVillainHandStrength);
 
             if (boardStrength < bestVillainHandStrength && boardStrength < heroMaxHandStrength) {
                 this.ties++;

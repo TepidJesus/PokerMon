@@ -1,7 +1,7 @@
 public class Card {
 
     int rank;
-    String suit;
+    int suit;
     private final int cardValue;
 
     // Card Ranks
@@ -20,10 +20,10 @@ public class Card {
     public static final int ACE = 12;
 
     // Card Suits
-    public static final int CLUBS = 0x8000;
-    public static final int DIAMONDS = 0x4000;
-    public static final int HEARTS = 0x2000;
-    public static final int SPADES = 0x1000;
+    public static final int CLUBS = 0x8000; // 32768
+    public static final int DIAMONDS = 0x4000; // 16384
+    public static final int HEARTS = 0x2000; // 8192
+    public static final int SPADES = 0x1000; // 4096
 
     // Card Rank symbols
     private static final String RANKS = "23456789TJQKA";
@@ -33,7 +33,8 @@ public class Card {
     Card(int rank, int suit) {
 
         this.cardValue = (1 << (rank + 16)) | suit | (rank << 8) | HandTables.PRIMES[rank];
-
+        this.rank = rank;
+        this.suit = suit;
     }
 
     public String toString() {
@@ -44,7 +45,7 @@ public class Card {
         return this.rank;
     }
 
-    public String getSuit() {
+    public int getSuit() {
         return this.suit;
     }
 
@@ -65,7 +66,7 @@ public class Card {
         if (this.rank != other.rank) {
             return false;
         }
-        if (this.suit.equals(other.suit)) {
+        if (this.suit != other.suit) {
             return false;
         }
         return true;

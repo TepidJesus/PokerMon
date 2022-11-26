@@ -9,6 +9,8 @@ public class CardDeck {
     }};
 
     ArrayList<Integer> values = new ArrayList<Integer>() {{
+        add(0);
+        add(1);
         add(2);
         add(3);
         add(4);
@@ -20,8 +22,7 @@ public class CardDeck {
         add(10);
         add(11);
         add(12);
-        add(13);
-        add(14);
+
     }};
 
     ArrayList<Card> deck = new ArrayList<Card>();
