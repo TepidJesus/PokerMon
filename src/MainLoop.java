@@ -15,15 +15,15 @@ public class MainLoop {
         heroCards[1] = new Card(Card.ACE, Card.DIAMONDS);
         System.out.println("Hero Cards: " + heroCards[0].toString() + " & " + heroCards[1].toString());
 
-        villainCards[0][0] = deck.getRandCard();
-        villainCards[0][1] = deck.getRandCard();
+        villainCards[0][0] = new Card(Card.QUEEN, Card.HEARTS);
+        villainCards[0][1] = new Card(Card.DEUCE, Card.SPADES);
         System.out.println("Villain 1 Cards: " + villainCards[0][0].toString() + " & " + villainCards[0][1].toString());
 
-        villainCards[1][0] = deck.getRandCard();
-        villainCards[1][1] = deck.getRandCard();
+        villainCards[1][0] = new Card(Card.JACK, Card.DIAMONDS);
+        villainCards[1][1] = new Card(Card.JACK, Card.HEARTS);
         System.out.println("Villain 2 Cards: " + villainCards[1][0].toString() + " & " + villainCards[1][1].toString());
 
-        EquityCalculator calculator = new EquityCalculator(2, 100000, heroCards, villainCards);
+        EquityCalculator calculator = new EquityCalculator(2, 100000 , heroCards, villainCards);
         calculator.runSimulation();
         calculator.printResults();
 

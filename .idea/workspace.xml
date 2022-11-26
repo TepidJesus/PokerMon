@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Switched to new suit format">
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Modified Default Values and Equals__">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EquityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquityCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainLoop.java" afterDir="false" />
     </list>
@@ -189,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669363056698</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added Running Code">
+      <created>1669433218477</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1669433218477</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Modified Default Values and Equals__">
+      <created>1669433249350</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1669433249350</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,7 +242,9 @@
     <MESSAGE value="Implementing N choose R algo" />
     <MESSAGE value="Added Villain Combo Generation" />
     <MESSAGE value="Switched to new suit format" />
-    <option name="LAST_COMMIT_MESSAGE" value="Switched to new suit format" />
+    <MESSAGE value="Added Running Code" />
+    <MESSAGE value="Modified Default Values and Equals__" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified Default Values and Equals__" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
