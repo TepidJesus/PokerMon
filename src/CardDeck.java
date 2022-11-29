@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.security.SecureRandom;
+import java.util.Random;
 public class CardDeck {
     ArrayList<Integer> suits = new ArrayList<Integer>() {{
         add(Card.HEARTS);
@@ -26,7 +27,7 @@ public class CardDeck {
     }};
 
     ArrayList<Card> deck = new ArrayList<Card>();
-    SecureRandom randomGen;
+    Random randomGen;
     CardDeck () {
 
          for (Integer suit : suits) {
@@ -35,14 +36,14 @@ public class CardDeck {
              }
          }
 
-         randomGen = new SecureRandom();
+         randomGen = new Random();
 
     }
 
     CardDeck(ArrayList<Card> deckTemplate) {
 
         deck.addAll(deckTemplate);
-        randomGen = new SecureRandom();
+        randomGen = new Random();
     }
 
     public Card getRandCard() {
@@ -54,6 +55,11 @@ public class CardDeck {
 
     public void removeCard(Card card) {
         deck.remove(card);
+    }
+
+
+    public ArrayList<Card> getDeck() {
+        return deck;
     }
 
 }

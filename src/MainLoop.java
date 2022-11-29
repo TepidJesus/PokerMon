@@ -19,7 +19,7 @@ public class MainLoop {
         villainCards[0][1] = new Card(Card.DEUCE, Card.SPADES);
         System.out.println("Villain 1 Cards: " + villainCards[0][0].toString() + " & " + villainCards[0][1].toString());
 
-        villainCards[1][0] = new Card(Card.JACK, Card.DIAMONDS);
+        villainCards[1][0] = new Card(Card.TEN, Card.DIAMONDS);
         villainCards[1][1] = new Card(Card.JACK, Card.HEARTS);
         System.out.println("Villain 2 Cards: " + villainCards[1][0].toString() + " & " + villainCards[1][1].toString());
 

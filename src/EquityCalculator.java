@@ -55,7 +55,6 @@ public class EquityCalculator {
         }
 
 
-
         // Simulation Starts Here
         for (int i = 0; i < numSimulations; i++) {
             CardDeck deck = new CardDeck(deckTemplate.deck);
