@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Solved Tie Issue">
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Minor Randomness Modifications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardDeck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EquityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EquityCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainLoop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669498439605</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Minor Randomness Modifications">
+      <created>1669708136709</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669708136709</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +266,8 @@
     <MESSAGE value="Modified Default Values and Equals__" />
     <MESSAGE value="Switched form random card selection to fixed." />
     <MESSAGE value="Solved Tie Issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Solved Tie Issue" />
+    <MESSAGE value="Minor Randomness Modifications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor Randomness Modifications" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
