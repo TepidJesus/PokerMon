@@ -34,7 +34,7 @@ public class MainLoop {
     }
 
 
-    public void randomSim() {W
+    public void randomSim() {
         CardDeck deck = new CardDeck();
         Card[] heroCards = new Card[2];
         Card[][] villainCards = new Card[2][2];
