@@ -1,3 +1,5 @@
+package application;
+
 public class HandTables {
 
     private static final int CARDS_IN_DECK = 52;

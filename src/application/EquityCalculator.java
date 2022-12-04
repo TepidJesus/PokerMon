@@ -1,3 +1,8 @@
+package application;
+
+import application.Card;
+import application.CardDeck;
+
 public class EquityCalculator {
     int numHeros;
     int numVillains;

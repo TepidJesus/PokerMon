@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Made Main more OOP">
-      <change beforePath="$PROJECT_DIR$/src/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainLoop.java" afterDir="false" />
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Fixed Typo">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerSolver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PokerSolver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EquityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/EquityCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HandTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/HandTables.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainLoop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,26 +50,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/holdo/OneDrive - The University of Auckland/Coding/PokerSolver/src",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\holdo\OneDrive - The University of Auckland\Coding\PokerSolver\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\holdo\OneDrive - The University of Auckland\Coding\PokerSolver\images" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="MainLoop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainLoop" />
+    <configuration name="application.MainLoop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="18" />
+      <option name="MAIN_CLASS_NAME" value="application.MainLoop" />
       <module name="PokerSolver" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\holdo\Documents\javafx-sdk-19\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainLoop" />
+        <item itemvalue="Application.application.MainLoop" />
       </list>
     </recent_temporary>
   </component>
@@ -227,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669870359784</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed Typo">
+      <created>1669870377894</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1669870377894</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,7 +302,8 @@
     <MESSAGE value="Solved Tie Issue" />
     <MESSAGE value="Minor Randomness Modifications" />
     <MESSAGE value="Made Main more OOP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Main more OOP" />
+    <MESSAGE value="Fixed Typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

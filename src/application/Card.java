@@ -1,10 +1,12 @@
+package application;
+
 public class Card {
 
     int rank;
     int suit;
     private final int cardValue;
 
-    // Card Ranks
+    // application.Card Ranks
     public static final int DEUCE = 0;
     public static final int THREE = 1;
     public static final int FOUR = 2;
@@ -19,13 +21,13 @@ public class Card {
     public static final int KING = 11;
     public static final int ACE = 12;
 
-    // Card Suits
+    // application.Card Suits
     public static final int CLUBS = 0x8000; // 32768
     public static final int DIAMONDS = 0x4000; // 16384
     public static final int HEARTS = 0x2000; // 8192
     public static final int SPADES = 0x1000; // 4096
 
-    // Card Rank symbols
+    // application.Card Rank symbols
     private static final String RANKS = "23456789TJQKA";
     private static final String SUITS = "shdc";
 

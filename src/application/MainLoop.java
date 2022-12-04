@@ -1,6 +1,18 @@
-public class MainLoop {
+
+package application;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+
+
+public class MainLoop extends Application {
 
     public static void main(String[] args) {
+
+        launch(args);
+
         Card[] heroCards = new Card[2];
         Card[][] villainCards = new Card[2][2];
 
@@ -14,6 +26,19 @@ public class MainLoop {
         villainCards[1][1] = new Card(Card.JACK, Card.HEARTS);
 
         fixedSimulation(heroCards, villainCards, 1000);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        Group root = new Group();
+        Scene scene = new Scene(root);
+
+        Image cornerIcon = new Image("file:images/icon.png");
+        primaryStage.getIcons().add(cornerIcon);
+        primaryStage.setTitle("PokerMon");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void fixedSimulation(Card[] heroCards, Card[][] villainCards, int numSimulations) {

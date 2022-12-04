@@ -1,5 +1,8 @@
+package application;
+
+import application.Card;
+
 import java.util.ArrayList;
-import java.security.SecureRandom;
 import java.util.Random;
 public class CardDeck {
     ArrayList<Integer> suits = new ArrayList<Integer>() {{
