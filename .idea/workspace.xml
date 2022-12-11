@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Fixed Typo">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icon.png" afterDir="false" />
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Added GUI Basics">
+      <change afterPath="$PROJECT_DIR$/src/application/application.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PokerSolver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PokerSolver.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CardDeck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EquityCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/EquityCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HandTables.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/HandTables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainLoop.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -52,13 +49,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/holdo/OneDrive - The University of Auckland/Coding/PokerSolver/src",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -255,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669870377894</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added GUI Basics">
+      <created>1670116396129</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670116396129</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,7 +309,8 @@
     <MESSAGE value="Minor Randomness Modifications" />
     <MESSAGE value="Made Main more OOP" />
     <MESSAGE value="Fixed Typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo" />
+    <MESSAGE value="Added GUI Basics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GUI Basics" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,5 +321,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

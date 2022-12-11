@@ -1,9 +1,12 @@
 
 package application;
 import javafx.application.Application;
-import javafx.scene.Group;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
@@ -31,10 +34,12 @@ public class MainLoop extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Group root = new Group();
+        Parent root = FXMLLoader.load(getClass().getResource("application.fxml"));
         Scene scene = new Scene(root);
 
         Image cornerIcon = new Image("file:images/icon.png");
+
+
         primaryStage.getIcons().add(cornerIcon);
         primaryStage.setTitle("PokerMon");
         primaryStage.setScene(scene);
