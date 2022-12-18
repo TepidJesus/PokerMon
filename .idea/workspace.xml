@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Added GUI Basics">
-      <change afterPath="$PROJECT_DIR$/src/application/application.fxml" afterDir="false" />
+    <list default="true" id="76348e13-feb3-4356-82e8-fbe9bd1d183b" name="Changes" comment="Began GUI Design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/MainLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/MainLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerSolver.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PokerSolver.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/application.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/application.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/holdo/OneDrive - The University of Auckland/Coding/PokerSolver/src",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.JavaFX"
@@ -261,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670116396129</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Began GUI Design">
+      <created>1670731775743</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670731775743</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,7 +317,8 @@
     <MESSAGE value="Made Main more OOP" />
     <MESSAGE value="Fixed Typo" />
     <MESSAGE value="Added GUI Basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GUI Basics" />
+    <MESSAGE value="Began GUI Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="Began GUI Design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
